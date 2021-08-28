@@ -3,15 +3,45 @@
 
 <head>
   <meta charset='utf-8' />
-  <title>VaxCard</title>
-  <link rel='stylesheet' href='css/styles.css'
-</head>
+  <title>vaxcard.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans+JP:wght@100;300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel='stylesheet' href='css/styles.css' </head>
 
 <body>
+  <div class='navbar'>
+    <div class='logo'>
+      <h1>vAccess</h1>
+    </div>
+  </div>
   <div class='container'>
-    <h1>Vax Card</h1>
+
+    <h1>Access your COVID-19 vaccination card in the cloud</h1>
+    <div class='row'>
+      <div class='column'>
+        <img src='images/VaccineCard.jpg' class='homeImg' />
+      </div>
+      <div class='column'>
+        <div class='login-card'>
+
+          <h2><i class="fas fa-lock"></i>Secure Login</h2>
+          <form action='/' method='post'>
+            <input type='text' name='username' placeholder='username' />
+            <input type='password' name='password' placeholder='password' />
+            <button class='btnSubmit' type='submit'>Login</button>
+          </form>
+          <a href='#'>
+            Or register
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
+<script src='index.js'></script>
 </body>
 
 
