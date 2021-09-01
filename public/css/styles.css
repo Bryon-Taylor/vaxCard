@@ -66,7 +66,7 @@
 .btnSubmit {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   border-radius: 4px;
   border: none;
   background-color: #548CA8;
@@ -81,6 +81,7 @@
   height: 360px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
+  margin: auto;
 }
 
 /* .card:hover .card-container {
@@ -149,4 +150,14 @@ h2 {
 
 body {
   margin: 0;
+}
+
+p {
+
+}
+
+#check-password {
+  font-family: Roboto, sans-serif;
+  color: red;
+  font-size: 1em;
 }
