@@ -13,12 +13,11 @@
 <body>
   <div class="navbar">
     <div class="logo">
-      <h1>vAccess</h1>
+      <h1>VaxCard</h1>
     </div>
   </div>
   <div class="container">
-
-    <h1>Access your COVID-19 vaccination card in the cloud</h1>
+    <h1 class="title">Access your COVID-19 vaccination card in the cloud</h1>
     <div class="row">
       <div class="column">
         <img src="images/VaccineCard.jpg" class="homeImg" />
@@ -30,12 +29,13 @@
 
               <h2><i class="fas fa-lock"></i>Secure Login</h2>
               <form action="/login" method="post">
+                <p id="errorMsg"></p>
                 <input type="email" name="username" placeholder="email" />
                 <input type="password" name="password" placeholder="password" />
-                <button class="btnSubmit" type="submit">Login</button>
+                <button class="btnSubmit pointer" type="submit">Login</button>
               </form>
               <p>Forgot password?</p>
-              <p id="registerText">Create an account</p>
+              <p id="registerText" class="pointer">Create an account</p>
             </div>
             <div class="register-card">
 
@@ -45,10 +45,10 @@
                 <input id="password1" type="password" name="password" placeholder="password" />
                 <input id="password2" type="password"  name="password2" placeholder="confirm password" />
                 <div id="check-password"></div>
-                <button id="registerBtn" class="btnSubmit" type="submit">Register</button>
+                <button id="registerBtn" class="btnSubmit pointer" type="submit">Register</button>
               </form>
 
-              <p id="loginText">Have an account? Login</p>
+              <p id="loginText" class="pointer">Have an account? Login</p>
             </div>
           </div>
         </div>
