@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const passport = require("passport");
+require('dotenv').config(); // to access sensitive information in .env file
+
 // local strategy is used to login with username and password
 LocalStrategy = require('passport-local').Strategy;
 
@@ -30,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // session initial configuration TODO use ENVIRONMENT VARIABLE FILE (process.env)
 app.use(session({
-  secret: "my secret",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }));
