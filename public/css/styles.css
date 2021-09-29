@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 /* classes */
@@ -8,7 +7,6 @@
   max-width: 1200px;
   text-align: center;
   margin: 40px auto 0;
-  /* background-color: yellow; */
 }
 
 .navbar {
@@ -43,17 +41,12 @@
 }
 
 .row {
-  /* overflow: hidden; */
   width: 100%;
   display: flex;
-
 }
 
 .row .column {
-  /* text-align: center; */
-  /* float: left; */
   width: 40%;
-  /* vertical-align: center; */
 }
 
 .column {
@@ -84,10 +77,6 @@
   margin: auto;
 }
 
-/* .card:hover .card-container {
-  transform: rotateY(180deg);
-} */
-
 /* this container is necessary to position the front (login) and back (register) cards */
 .card-container {
   position: relative;
@@ -114,6 +103,10 @@
   backface-visibility: hidden;
 }
 
+.title {
+  margin-bottom: 40px;
+}
+
 /* necessary to display register card on "back" of card */
 .register-card {
   transform: rotateY(180deg);
@@ -123,6 +116,10 @@
   font-family: Noto Sans JP, sans-serif;
   text-decoration: none;
   color: #548CA8;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 /* html elements */

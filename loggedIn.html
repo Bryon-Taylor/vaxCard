@@ -6,9 +6,15 @@
   </head>
   <body>
     <h1>Logged in</h1>
-    <form action="/logout" method="post">
-      <input type="submit" name="logout" value="logout"/>
+    <form action="/images" method="post" enctype="multipart/form-data">
+      <label for="cardImage">Upload your vaccine card photo</label>
+      <input type="file" id="cardImage" name="cardImage" accept="image/*"/>
+      <button type="submit">Submit</button>
     </form>
+
+    <a href="logout" type="button">logout</a>
+    <img id="displayCard"/>
+
     <script src="js/app.js"></script>
   </body>
 </html>
