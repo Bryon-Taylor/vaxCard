@@ -81,7 +81,11 @@ app.get("/", function(req, res) {
 // home page for authenticated users
 app.get("/loggedIn", function(req, res) {
   if (req.isAuthenticated()) {
-    res.sendFile(__dirname + "/loggedIn.html");
+    console.log(req.user);
+    if(req.user.imgUrl) {
+      console.log(req.user.imgUrl); // display the image at this URL
+    }
+    res.sendFile(__dirname + "/account.html");
   } else {
     res.redirect("/");
   }
@@ -114,15 +118,15 @@ app.post('/login', passport.authenticate('local', { successRedirect: '/loggedIn'
 
 app.post('/images', upload.single('cardImage'), async function(req, res) {
   const imageFile = req.file;
-  const result = await uploadImage(imageFile);
+  const result = await uploadImage(imageFile); // upload image to AWS S3 bucket
   await deleteImage(imageFile.path); // delete locally stored image
   const email = req.user.username; // currently logged in user
   const imageUrl = result.Location; // s3 bucket URL where image is stored
-  addImageUrl(email, imageUrl);
+  addImageUrlToUser(email, imageUrl);
 });
 
 // update user record to insert Amazon S3 bucket link to vaccine card image
-async function addImageUrl(email, imageUrl) {
+async function addImageUrlToUser(email, imageUrl) {
   const user = await User.findOneAndUpdate({username: email}, {imgUrl: imageUrl}, {new: true});
 }
 
